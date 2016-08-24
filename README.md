@@ -5,7 +5,7 @@ I am going to show you how I figured on a way to deal with paged results from th
 An api call looked like this. Boy that's a long query string.
 ```Javascript
 function apiFacebookPosts(item, accessToken, since = '15-12-1') {
-  return fetch(`https://graph.facebook.com/v2.5/${item}?				fields=name,posts{story,created_time,id,message,comments,picture,likes},likes.since(${since}).limit(33){likes.limit(50),id,message,picture,created_time,comments}&access_token=${accessToken}`);
+  return fetch(`https://graph.facebook.com/v2.5/${item}?fields=name,posts{story,created_time,id,message,comments,picture,likes},likes.since(${since}).limit(33){likes.limit(50),id,message,picture,created_time,comments}&access_token=${accessToken}`);
 }
 ```
 
