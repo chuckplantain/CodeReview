@@ -68,7 +68,7 @@ getFacebookPosts() {
               getMoreLikes(item.likes.paging.next, item.id, item.likes.data.length);
             }
           });
-        if (this.state.facebookPosts.length < 98 && json.posts.data.length >= 33) { // Our users do not want more than 98 posts to be loaded (enough is enough). Our api request limits to 33 posts per request
+        if (this.state.facebookPosts.length < 98 && json.posts.data.length >= 33) {
           getMorePosts(json.paging.next);
         } else {
           this.setState({ facebookReady: true });
